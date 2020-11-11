@@ -1,0 +1,10 @@
+.PHONY: all docker-image
+
+DOCKER_IMAGE="quay.io/kkourt/netperf:xping"
+
+all:
+	@echo "help: run 'make docker-image' to build and push the image"
+
+docker-image:
+	docker build . -f Dockerfile -t $(DOCKER_IMAGE)
+	docker push $(DOCKER_IMAGE)
