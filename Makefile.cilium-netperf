@@ -6,5 +6,5 @@ all:
 	@echo "help: run 'make docker-image' to build and push the image"
 
 docker-image:
-	docker build . -f Dockerfile -t $(DOCKER_IMAGE)
+	docker build . -f Dockerfile.cilium-netperf -t $(DOCKER_IMAGE)
 	docker push $(DOCKER_IMAGE)
